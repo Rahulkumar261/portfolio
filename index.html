@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Rahul Kumar | Portfolio</title>
+<title>Rahul Kumar</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -10,122 +10,58 @@
     padding:0;
     box-sizing:border-box;
     font-family: Arial, sans-serif;
-    scroll-behavior:smooth;
 }
 
-body{
-    background:#0a0a0a;
-    color:white;
+body,html{
+    height:100%;
 }
 
-/* NAVBAR */
-nav{
-    display:flex;
-    justify-content:space-between;
-    padding:25px 10%;
-    background:#111;
-}
-
-nav h2{
-    color:#00ffcc;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:20px;
-}
-
-nav a:hover{
-    color:#00ffcc;
-}
-
-/* HERO */
+/* HERO SECTION */
 .hero{
+    position:relative;
+    height:100vh;
+    background:url("myphoto.jpg") center/cover no-repeat;
     display:flex;
-    justify-content:space-between;
     align-items:center;
-    padding:100px 10%;
-    min-height:90vh;
-}
-
-.hero-text h1{
-    font-size:50px;
-}
-
-.hero-text span{
-    color:#00ffcc;
-}
-
-.hero-text p{
-    margin-top:15px;
-    opacity:0.7;
-}
-
-.btn{
-    display:inline-block;
-    margin-top:25px;
-    padding:12px 28px;
-    background:#00ffcc;
-    color:black;
-    text-decoration:none;
-    border-radius:30px;
-    font-weight:bold;
-}
-
-.hero img{
-    width:280px;
-    border-radius:50%;
-    border:4px solid #00ffcc;
-    box-shadow:0 0 25px #00ffcc;
-}
-
-/* SECTION */
-.section{
-    padding:80px 10%;
-    text-align:center;
-}
-
-.section h2{
-    color:#00ffcc;
-    margin-bottom:30px;
-}
-
-.cards{
-    display:flex;
     justify-content:center;
-    gap:25px;
-    flex-wrap:wrap;
 }
 
-.card{
-    background:#1a1a1a;
-    padding:25px;
-    width:250px;
-    border-radius:15px;
-    transition:0.3s;
+/* Dark overlay */
+.hero::after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    top:0;
+    left:0;
 }
 
-.card:hover{
-    transform:translateY(-8px);
-    background:#222;
+/* Big Name Text */
+.hero h1{
+    position:relative;
+    color:white;
+    font-size:120px;
+    font-weight:bold;
+    letter-spacing:5px;
+    z-index:2;
+    mix-blend-mode:lighten;
 }
 
-/* FOOTER */
-footer{
-    background:#111;
-    text-align:center;
-    padding:25px;
-    margin-top:50px;
+/* Subtitle */
+.subtitle{
+    position:absolute;
+    bottom:40px;
+    color:white;
+    font-size:20px;
+    z-index:2;
 }
 
+/* Responsive */
 @media(max-width:900px){
-    .hero{
-        flex-direction:column;
+    .hero h1{
+        font-size:50px;
         text-align:center;
-    }
-    .hero img{
-        margin-top:40px;
     }
 }
 </style>
@@ -133,45 +69,10 @@ footer{
 
 <body>
 
-<nav>
-    <h2>Rahul</h2>
-    <div>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-    </div>
-</nav>
-
 <div class="hero">
-    <div class="hero-text">
-        <h1>Hello, I'm <span>Rahul Kumar</span></h1>
-        <p>Frontend Developer | C++ Programmer</p>
-        <a href="#projects" class="btn">View Projects</a>
-    </div>
-    <img src="myphoto.jpg">
+    <h1>Rahul Kumar</h1>
+    <div class="subtitle">Frontend Developer | C++ Programmer</div>
 </div>
-
-<div class="section" id="skills">
-    <h2>My Skills</h2>
-    <div class="cards">
-        <div class="card">C++ Programming</div>
-        <div class="card">HTML & CSS</div>
-        <div class="card">JavaScript</div>
-    </div>
-</div>
-
-<div class="section" id="projects">
-    <h2>My Projects</h2>
-    <div class="cards">
-        <div class="card">Vehicle Management System</div>
-        <div class="card">Student Management System</div>
-        <div class="card">Portfolio Website</div>
-    </div>
-</div>
-
-<footer>
-    © 2026 Rahul Kumar
-</footer>
 
 </body>
 </html>
