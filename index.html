@@ -1,121 +1,137 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Rahul Kumar | Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rahul Kumar | Developer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:'Poppins', sans-serif;
-            scroll-behavior:smooth;
-        }
+body{
+    background:#0f0f0f;
+    color:white;
+}
 
-        body{
-            background: white(135deg, #fafdfe, #000000, #070606);
-            color:rgb(0, 0, 0);
-        }
+nav{
+    display:flex;
+    justify-content:space-between;
+    padding:25px 8%;
+    background:#111;
+}
 
-        nav{
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            padding:20px 50px;
-            background:rgba(0,0,0,0.4);
-            position:sticky;
-            top:0;
-        }
+nav h2{
+    color:#00ffcc;
+}
 
-        nav h2{
-            color:#a22e49;
-        
-        }
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    transition:0.3s;
+}
 
-        nav a{
-            color:rgb(0, 0, 0);
-            text-decoration:none;
-            margin-left:20px;
-            transition:0.3s;
-        }
+nav a:hover{
+    color:#00ffcc;
+}
 
-        nav a:hover{
-            color:#000000;
-        }
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:100px 8%;
+    min-height:90vh;
+}
 
-        header{
-            text-align:center;
-            padding:120px 20px;
-        }
+.hero-text h1{
+    font-size:55px;
+}
 
-        header h1{
-            font-size:55px;
-            margin-bottom:10px;
-        }
+.hero-text span{
+    color:#00ffcc;
+}
 
-        header span{
-            color:#d41010;
-        }
+.hero-text p{
+    margin-top:15px;
+    font-size:18px;
+    opacity:0.7;
+}
 
-        section{
-            padding:70px 20px;
-            max-width:1000px;
-            margin:auto;
-        }
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:12px 30px;
+    background:#00ffcc;
+    color:black;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    transition:0.3s;
+}
 
-        .card{
-            background:rgba(255,255,255,0.08);
-            padding:30px;
-            margin-bottom:25px;
-            border-radius:20px;
-            backdrop-filter:blur(10px);
-            transition:0.4s;
-        }
+.btn:hover{
+    background:white;
+}
 
-        .card:hover{
-            transform:translateY(-10px);
-            background:rgba(255,255,255,0.15);
-        }
+.hero img{
+    width:300px;
+    border-radius:50%;
+    border:4px solid #00ffcc;
+    box-shadow:0 0 30px #00ffcc;
+}
 
-        h2{
-            margin-bottom:15px;
-            color:#2309a4;
-        }
+.section{
+    padding:80px 8%;
+    text-align:center;
+}
 
-        .btn{
-            display:inline-block;
-            padding:12px 25px;
-            background:#d4f500;
-            color:black;
-            text-decoration:none;
-            border-radius:30px;
-            margin-top:15px;
-            transition:0.3s;
-        }
+.section h2{
+    font-size:35px;
+    margin-bottom:30px;
+    color:#00ffcc;
+}
 
-        .btn:hover{
-            background:white;
-        }
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
 
-        footer{
-            text-align:center;
-            padding:25px;
-            background:rgba(0,0,0,0.4);
-        }
+.card{
+    background:#1a1a1a;
+    padding:30px;
+    width:250px;
+    border-radius:15px;
+    transition:0.3s;
+}
 
-        @media(max-width:768px){
-            nav{
-                flex-direction:column;
-            }
+.card:hover{
+    transform:translateY(-10px);
+    background:#222;
+}
 
-            header h1{
-                font-size:35px;
-            }
-        }
-    </style>
+footer{
+    text-align:center;
+    padding:25px;
+    background:#111;
+    margin-top:50px;
+}
+
+@media(max-width:900px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+    .hero img{
+        margin-top:40px;
+    }
+}
+</style>
 </head>
 
 <body>
@@ -130,51 +146,35 @@
     </div>
 </nav>
 
-<header>
-     <img src="myphoto.jpg" width="200" 
-style="border:5px solid rgb(24, 25, 24); border-radius:50%;">
-     
-    <h1> <span>Rahul Kumar</span></h1>
-   
-    <p>Frontend Developer | C++ Programmer</p>
-    <a href="#contact" class="btn">Hire Me</a>
-</header>
-
-<section id="about">
-    <div class="card">
-        <h2>About Me</h2>
-        <p>I am a passionate developer learning C++, OOP concepts and Web Development. I enjoy building modern, responsive and creative websites.</p>
+<div class="hero">
+    <div class="hero-text">
+        <h1>Hello, I'm <span>Rahul Kumar</span></h1>
+        <p>Frontend Developer | C++ Programmer</p>
+        <a href="#contact" class="btn">Hire Me</a>
     </div>
-</section>
 
-<section id="skills">
-    <div class="card">
-        <h2>Skills</h2>
-        <p>✔ C++ Programming</p>
-        <p>✔ Object Oriented Programming</p>
-        <p>✔ HTML, CSS</p>
-        <p>✔ Basic JavaScript</p>
+    <img src="myphoto.jpg" alt="Profile">
+</div>
+
+<div class="section" id="skills">
+    <h2>My Skills</h2>
+    <div class="cards">
+        <div class="card">C++ Programming</div>
+        <div class="card">HTML & CSS</div>
+        <div class="card">JavaScript</div>
     </div>
-</section>
+</div>
 
-<section id="projects">
-    <div class="card">
-        <h2>Projects</h2>
-        <p>• Vehicle Management System (C++)</p>
-        <p>• Student Management System</p>
-        <p>• Portfolio Website</p>
+<div class="section" id="projects">
+    <h2>Projects</h2>
+    <div class="cards">
+        <div class="card">Vehicle Management System</div>
+        <div class="card">Student Management System</div>
+        <div class="card">Portfolio Website</div>
     </div>
-</section>
+</div>
 
-<section id="contact">
-    <div class="card">
-        <h2>Contact Me</h2>
-        <p>Email: rahulkuamr@gmail.com</p>
-        <p>Phone: +91 8144121302</p>
-    </div>
-</section>
-
-<footer>
+<footer id="contact">
     © 2026 Rahul Kumar | All Rights Reserved
 </footer>
 
